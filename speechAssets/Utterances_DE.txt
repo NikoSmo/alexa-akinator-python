@@ -1,0 +1,10 @@
+StartIntent Start
+StartIntent Los
+DontKnowIntent Weiß ich nicht
+DontKnowIntent Das weiß ich nicht
+DontKnowIntent Keine Ahnung
+ProbablyIntent Wahrscheinlich
+ProbablyIntent Ich denke schon
+ProbablyIntent Vermutlich
+ProbablyNotIntent Wahrscheinlich nicht
+ProbablyNotIntent Ich denke nicht

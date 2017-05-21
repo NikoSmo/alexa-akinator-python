@@ -1,7 +1,7 @@
 import random
 import time
 
-import akinatorAPI
+from src import akinatorAPI
 
 api = akinatorAPI.Apinator()
 api.new_session('dawn')
