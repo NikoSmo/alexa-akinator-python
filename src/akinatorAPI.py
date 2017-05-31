@@ -38,7 +38,7 @@ class Apinator:
             self.question = self.json_data['parameters']['question']
             self.step += 1
 
-    def getCharacterGuess(self):
+    def getCharacterGuess(self) -> object:
         self.url = self.base_url + 'list?session=' + self.session + '&signature=' + self.signature \
                    + '&step=' + str(self.step) + '&size=2&max_pic_width=246&max_pic_height=294&pref_photos=OK-FR&mode_question=0'
         self.json_data = requests.get(self.url).json()
