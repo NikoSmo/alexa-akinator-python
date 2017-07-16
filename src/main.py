@@ -74,4 +74,4 @@ def stop_intent():
     return statement(bye_msg);
 
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run()
