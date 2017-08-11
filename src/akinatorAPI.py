@@ -15,12 +15,11 @@ class Apinator:
         self.answerId=''
         self.question = ''
         self.characterFound = False
-        self.progression_threshold = 97
+        self.progression_threshold = 93
 
     def new_session(self,name):
         self.url = self.base_url + 'new_session?partner=1&' + urllib.parse.urlencode({'player': name})
         self.json_data = requests.get(self.url).json()
-        #self.json_data = json.dumps(self.json_data)
         self.session = self.json_data['parameters']['identification']['session']
         self.signature = self.json_data['parameters']['identification']['signature']
         self.question = self.json_data['parameters']['step_information']['question']
@@ -43,10 +42,10 @@ class Apinator:
                    + '&step=' + str(self.step) + '&size=2&max_pic_width=246&max_pic_height=294&pref_photos=OK-FR&mode_question=0'
         self.json_data = requests.get(self.url).json()
         self.character = self.json_data['parameters']['elements'][0]['element']['name']
-        print(self.character)
+        return self.character
 
     def getQuestion(self):
-        print(self.question)
+        return self.question
 
     def isCharacterFound(self):
         return self.characterFound
